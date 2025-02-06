@@ -45,10 +45,10 @@ const Contact = () => {
                     <p>Im currently Available to talk , please feel free to send message about anything that you want me to work on.You can contact anytime.</p>
                     <div className="contact-details">
                         <div className="contact-detail">
-                            <img src={mail_icon} alt="" /> <p>madhumitha@gmail.com</p>
+                            <img src={mail_icon} alt="" /> <p>madhumithatkvmrb@gmail.com</p>
                         </div>
                         <div className="contact-detail">
-                            <img src={call_icon} alt="" /> <p>123456789</p>
+                            <img src={call_icon} alt="" /> <p>6379827461</p>
                         </div>
                         <div className="contact-detail">
                             <img src={location_icon} alt="" /> <p>Villupuram</p>
