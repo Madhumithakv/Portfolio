@@ -1,5 +1,9 @@
 import project12 from '../assets/project12.png';
 import project11 from '../assets/project11.png';
+import project13 from '../assets/project13.png';
+import project14 from '../assets/project14.png';
+
+
 
 const mywork_data = [
     {
@@ -18,6 +22,22 @@ const mywork_data = [
         description: "A React-based expense tracking application that helps users manage their daily expenses efficiently.",
         key_skills: ["React.js", "Context API", "CSS", "State Management"]
     }
+    ,
+    {
+        w_no: 3,
+        w_name: "Book Store Management System",
+        w_img: project13,
+        description: "Developed a web application using Spring Boot and Thymeleaf to manage books, authors, and pricing efficiently.",
+        key_skills: ["Spring Boot", "Thymeleaf", "REST API", "Java","Maven","Mysql"]
+    },
+    {
+        "w_no": 4,
+        "w_name": "User Registration & Login System",
+        "w_img": project14,
+        "description": "Developed a secure authentication system using Spring Boot and React.js, integrating MySQL for user data storage.",
+        "key_skills": ["Spring Boot", "React.js", "MySQL", "JWT Authentication", "REST API", "Java", "Spring Security"]
+    }
+    
 ];
 
 export default mywork_data;

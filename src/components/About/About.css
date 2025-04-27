@@ -6,6 +6,28 @@
     gap: 80px;
     margin: 80px 170px;
 }
+.about-skill p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffcc00;
+    margin-bottom: 5px;
+    
+  }
+  
+  .about-skill hr {
+    height: 6px;
+    background-color: #B923E1;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .percent {
+    color: #B923E1;
+    font-weight: bold;
+  }
+  
 .about-title{
     position: relative;
 }
@@ -54,6 +76,8 @@
     font-size: 24px;
     font-weight: 500;
 }
+
+
 .about-skill hr{
     outline: none;
     border: none;
@@ -127,9 +151,12 @@
     }
     .about-skill p{
         font-size:20px;
+        
+
     }
     .about-skill hr{
         height: 6px;
+        width: 45px;
     }
     .about-achievements{
         justify-content: space-between;
@@ -216,6 +243,7 @@
 @media(max-width:768px){
     .hero img{
         margin-top: 120px;
+        margin-left: 20px;
         width: 260px; /* Adjust for smaller screens */
         height: 260px; /* Adjust height for smaller screens */
     }
@@ -224,6 +252,12 @@
         margin-top: 50px;
         width: 90%;
         font-size: 50px;
+        margin-left: 20px;
+        
+    }
+    .about-para{
+        text-align: center;
+        margin-left: 20px;
     }
 
     .hero p{
@@ -231,7 +265,9 @@
         font-size: 18px;
         line-height: 32px;
         margin: 10px 10px;
+        
     }
+    
 }
 
 .hero-resume a {
@@ -239,8 +275,14 @@
     color: inherit; /* Keeps the text color consistent */
     font-weight: bold; /* Optional: Makes the text bold */
 }
+.about-achievements{
+    justify-content: center;
+    margin-left: 10px;
+   
+}
+
 
 /* .hero-resume a:hover {
     text-decoration: none; 
     color: #007BFF; 
-} */
+} */  

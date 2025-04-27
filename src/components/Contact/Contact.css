@@ -114,8 +114,11 @@
 @media(max-width:768px){
     .contact{
         gap: 50px;
-        margin: 50px 70px;
+        margin: 50px 40px;
+        margin-right:25px;
         align-items: start;
+        justify-content: center;
+        
     }
     .contact-title h1{
         padding: 0;
@@ -135,6 +138,8 @@
     }
     .contact-left p{
         font-size: 18px;
+       
+        text-align: center;
     }
     .contact-detail{
         gap: 20px;
@@ -144,14 +149,20 @@
     }
     .contact-right label{
         font-size: 20px;
+        justify-content:left;
+        text-align: center;
     }
     .contact-right input{
         width: 100%;
         font-size: 20px;
+        
+        justify-content:left;
+        
     }
     .contact-right textarea{
         width: 95%;
         font-size: 20px;
+        justify-content: left;
     }
     .contact-submit{
         font-size: 20px;

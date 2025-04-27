@@ -96,12 +96,31 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+.services-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .services-logo:hover {
+    transform: scale(1.15);
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff88;
+  }
 
 @media (max-width: 768px) {
     .services {
-        align-items: start;
+        justify-content: center;
+        align-items: center;
         gap: 70px;
         margin: 20px 20px;
+   
+        
     }
 
     .services-title h1 {
@@ -135,7 +154,10 @@
     }
 
     .services-container {
+        justify-content: center;
+        align-items: center;
         grid-template-columns: 1fr;
         gap: 30px;
+        margin: 55px 55px;
     }
 }
