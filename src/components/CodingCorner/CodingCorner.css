@@ -1,0 +1,145 @@
+.coding-corner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+    padding: 50px 0;
+    background-color: transparent;
+}
+
+.coding-corner-title {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.coding-corner-title h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.coding-corner-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.coding-corner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-content: center;
+}
+
+.coding-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 13, 162, 0.786);
+    width: 420px;
+    text-align: center;
+    transition: 0.3s;
+    color: #ffffff;
+    position: relative;
+    z-index: 3;
+}
+
+.coding-card:hover {
+    transform: scale(1.05);
+}
+
+.coding-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.coding-card-img:hover {
+    transform: scale(1.10);
+    border: 4px solid #ff00ff;
+    border-radius: 10px;
+}
+
+.coding-card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffcc00;
+}
+
+.coding-card p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.coding-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+
+.coding-card ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.coding-card li {
+    background: #333333;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .coding-corner {
+        gap: 50px;
+        margin: 40px 70px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .coding-corner-title h1 {
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .coding-corner-title img {
+        width: 130px;
+        margin-right: -20px;
+    }
+
+    .coding-corner-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .coding-card {
+        width: 100%;
+    }
+
+    .coding-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}

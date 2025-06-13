@@ -27,6 +27,7 @@ const mywork_data = [
         w_no: 3,
         w_name: "Book Store Management System",
         w_img: project13,
+        project_link: "https://bookstore-production-d.up.railway.app/",
         description: "Developed a web application using Spring Boot and Thymeleaf to manage books, authors, and pricing efficiently.",
         key_skills: ["Spring Boot", "Thymeleaf", "REST API", "Java","Maven","Mysql"]
     },
