@@ -1,11 +1,94 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-  height:100vh;
-  background:#161513;
-  color: white;
-  font-family: 'outfit';
 
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  background:#06030f;
+  color:white;
+  font-family:'Outfit',sans-serif;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* ===========================
+   GRID BACKGROUND
+=========================== */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:60px 60px;
+}
+
+/* ===========================
+   TOP RIGHT GLOW
+=========================== */
+
+body::after{
+  content:"";
+  position:fixed;
+
+  width:900px;
+  height:900px;
+
+  top:-350px;
+  right:-250px;
+
+  background:radial-gradient(
+      circle,
+      rgba(185,35,225,0.30) 0%,
+      rgba(218,124,37,0.18) 35%,
+      transparent 75%
+  );
+
+  filter:blur(140px);
+  z-index:-2;
+  pointer-events:none;
+}
+
+/* ===========================
+   BOTTOM LEFT GLOW
+=========================== */
+
+.bg-glow-2{
+  position:fixed;
+
+  width:700px;
+  height:700px;
+
+  left:-300px;
+  bottom:-250px;
+
+  background:radial-gradient(
+      circle,
+      rgba(185,35,225,0.22) 0%,
+      rgba(218,124,37,0.10) 45%,
+      transparent 75%
+  );
+
+  filter:blur(150px);
+
+  z-index:-2;
+  pointer-events:none;
+}
+
+/* ===========================
+   HERO CENTER GLOW
+=========================== */
+  

@@ -6,21 +6,29 @@ import Services from './components/Services/Services'
 import MyWork from './components/MyWork/MyWork'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import Experience from './components/Experience/Experience'
+import Skills from './components/Skills/Skills'
 import CodingCorner from './components/CodingCorner/CodingCorner'
-const App =() => {
+
+const App = () => {
   return (
     <div>
-        <Navbar/>
-        <Hero/>
-        <About/>
-        <Services/>
-        <MyWork/>
-        
-        <CodingCorner/>
-        
-        <Contact/>
-        <Footer/>
-        
+      <div className="bg-glow-2"></div>
+
+
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+
+      <MyWork />
+      <Services />
+      <CodingCorner />
+
+      <Contact />
+      <Footer />
+
     </div>
   )
 }

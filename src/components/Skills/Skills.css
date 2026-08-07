@@ -1,0 +1,149 @@
+.skills-section{
+    padding:120px 8%;
+}
+
+.skills-header{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    margin-bottom:80px;
+}
+
+.skills-badge{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:#B923E1;
+
+    letter-spacing:3px;
+    font-size:12px;
+}
+
+.skills-header h1{
+    margin-top:25px;
+
+    font-size:72px;
+    font-weight:800;
+
+    color:white;
+}
+
+.skills-header h1 span{
+    background:linear-gradient(
+        267deg,
+        #DA7C25,
+        #B923E1
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.skills-header p{
+    margin-top:25px;
+
+    color:#a1a1aa;
+
+    font-size:22px;
+
+    line-height:1.8;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.skill-card-new{
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    transition:.4s;
+}
+
+.skill-card-new:hover{
+    transform:translateY(-8px);
+
+    border-color:#B923E1;
+
+    box-shadow:0 0 35px rgba(185,35,225,.15);
+}
+
+.skill-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.skill-icon{
+    width:52px;
+    height:52px;
+
+    border-radius:16px;
+
+    background:rgba(185,35,225,.12);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+}
+
+.skill-title h3{
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-tags span{
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(185,35,225,.35);
+
+    background:rgba(255,255,255,.03);
+
+    color:#d4d4d8;
+
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-header h1{
+        font-size:48px;
+    }
+
+    .skills-header p{
+        font-size:18px;
+    }
+}

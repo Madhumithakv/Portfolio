@@ -1,76 +1,180 @@
-import React from 'react'
-import './Contact.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
-import mail_icon from '../../assets/mail_icon.svg'
-import location_icon from '../../assets/location_icon.svg'
-import call_icon from '../../assets/call_icon.svg'
 
 
 
+import React from "react";
+import "./Contact.css";
+
+import mail_icon from "../../assets/mail_icon.svg";
+import call_icon from "../../assets/call_icon.svg";
+import location_icon from "../../assets/location_icon.svg";
 
 const Contact = () => {
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-    
-        formData.append("access_key", "c6092bfe-c6a5-4656-bcca-fdb713e5d46a");
-    
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-    
-        const res = await fetch("https://api.web3forms.com/submit", {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
+    formData.append(
+      "access_key",
+      "c6092bfe-c6a5-4656-bcca-fdb713e5d46a"
+    );
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
           },
-          body: json
-        }).then((res) => res.json());
-    
-        if (res.success) {
-          alert(res.message);
+          body: json,
         }
-      };
+      );
 
-    return (
-        <div id='contact' className='contact'>
-            <div className="contact-title">
-                <h1>Get in touch</h1>
-                <img src={theme_pattern} alt="" />
-            </div>
-            <div className="contact-section">
-                <div className="contact-left">
-                    <h1>Let's talk</h1>
-                    <p>Im currently Available to talk , please feel free to send message about anything that you want me to work on.You can contact anytime.</p>
-                    <div className="contact-details">
-                        <div className="contact-detail">
-                            <img src={mail_icon} alt="" /> <p>madhumithatkvmrb@gmail.com</p>
-                        </div>
-                        <div className="contact-detail">
-                            <img src={call_icon} alt="" /> <p>6379827461</p>
-                        </div>
-                        <div className="contact-detail">
-                            <img src={location_icon} alt="" /> <p>Villupuram</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div>
-                    <form  onSubmit={onSubmit} className='contact-right'>
-                        <label htmlFor="">Your Name</label>
-                        <input type="text" placeholder='Enter your name' name='name' />
-                        <label htmlFor="">Your Email</label>
-                        <input type="text" placeholder='Enter your email' name='email' />
-                        <label htmlFor="">Write your message here</label>
-                        <textarea name="message" id="" rows="8" placeholder='Enter your message'></textarea>
-                        <button type='submit' className='contact-submit'>Submit now</button>
-                    </form>
-                </div>
+      const result = await response.json();
+
+      console.log(result);
+
+      if (result.success) {
+        alert("✅ Message sent successfully!");
+        event.target.reset();
+      } else {
+        alert(result.message);
+      }
+
+    } catch (error) {
+      console.error(error);
+      alert("❌ Failed to send message.");
+    }
+  };
+
+  return (
+    <section id="contact" className="contact">
+
+      <div className="contact-wrapper">
+
+        {/* LEFT SIDE */}
+
+        <div className="contact-left">
+
+          <div className="contact-badge">
+            LET'S BUILD SOMETHING
+          </div>
+
+          <h1>
+            Ready to work
+            <br />
+            together?
+          </h1>
+
+          <p>
+            I'm currently open to opportunities in
+            Full Stack Development, Java Development,
+            Backend Engineering and AI-related roles.
+            Feel free to reach out.
+          </p>
+
+          <div className="contact-details">
+
+            <div className="info-card">
+              <img src={mail_icon} alt="" />
+
+              <div>
+                <span>EMAIL</span>
+                <h4>
+                  madhumithatkvmrb@gmail.com
+                </h4>
+              </div>
             </div>
 
+            <div className="info-card">
+              <img src={call_icon} alt="" />
+
+              <div>
+                <span>PHONE</span>
+                <h4>
+                  +91 6379827461
+                </h4>
+              </div>
+            </div>
+
+            <div className="info-card">
+              <img src={location_icon} alt="" />
+
+              <div>
+                <span>LOCATION</span>
+                <h4>
+                  Chennai, Tamil Nadu
+                </h4>
+              </div>
+            </div>
+
+          </div>
 
         </div>
-    )
-}
 
-export default Contact
+        {/* RIGHT SIDE */}
+
+        <form
+          onSubmit={onSubmit}
+          className="contact-right"
+        >
+
+          <div className="row">
+
+            <div className="field">
+              <label>Your Name</label>
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div className="field">
+              <label>Your Email</label>
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div className="field">
+            <label>Your Message</label>
+
+            <textarea
+              name="message"
+              rows="8"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="contact-submit"
+          >
+            Send Message →
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+  );
+};
+
+export default Contact;

@@ -1,0 +1,146 @@
+.experience{
+    padding:120px 10%;
+}
+
+.experience-header{
+    margin-bottom:80px;
+}
+
+.experience-tag{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+    border:1px solid rgba(185,35,225,.4);
+    color:#d8b4fe;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.experience-header h1{
+    font-size:70px;
+    line-height:1.2;
+}
+
+.experience-header span{
+    background:linear-gradient(
+      267deg,
+      #Da7c25,
+      #B923E1
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.timeline{
+    position:relative;
+    padding-left:60px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#8b5cf6;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:60px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:-57px;
+    top:25px;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+    border:3px solid #8b5cf6;
+    background:#06030f;
+}
+
+.timeline-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    padding:35px;
+}
+
+.timeline-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.timeline-top h2{
+    font-size:30px;
+}
+
+.company{
+    color:#c4b5fd;
+    margin-top:6px;
+}
+
+.date{
+    border:1px solid rgba(255,255,255,.08);
+    padding:10px 20px;
+    border-radius:30px;
+    color:#aaa;
+}
+
+.timeline-card ul{
+    padding-left:20px;
+}
+
+.timeline-card li{
+    margin-bottom:16px;
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+.timeline-tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.timeline-tags span{
+    padding:8px 16px;
+    border-radius:30px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    color:#c4b5fd;
+}
+
+@media(max-width:768px){
+
+.timeline{
+    padding-left:35px;
+}
+
+.timeline-dot{
+    left:-33px;
+}
+
+.timeline-top{
+    flex-direction:column;
+    gap:15px;
+}
+
+.experience-header h1{
+    font-size:45px;
+}
+
+.timeline-card{
+    padding:25px;
+}
+}

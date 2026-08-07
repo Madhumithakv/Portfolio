@@ -1,12 +1,14 @@
-import React from 'react';
+
+
+import React from "react";
 import "./Services.css";
-import theme_pattern from '../../assets/theme_pattern.svg';
-import Services_Data from '../../assets/services_data';
-import arrow_icon from '../../assets/arrow_icon.svg';
+import Services_Data from "../../assets/services_data";
 
 const Services = () => {
-  const handleCardClick = (s_no) => {
-    const links = {
+
+
+
+      const links = {
       "01": "https://drive.google.com/drive/folders/19uJ_QsfjgsgYg8uY-ehl19Gj2cJxbWKM?usp=sharing",
       "03": "https://drive.google.com/file/d/1mDY3YvXX8jSZQAyaEhmlBB43ECquz4tT/view?usp=sharing",
       "04": "https://drive.google.com/file/d/11QHBOX2RLm9_EmcTwPpAoxBeBzq-02l0/view?usp=sharing",
@@ -16,29 +18,66 @@ const Services = () => {
       "08": "https://drive.google.com/file/d/1NwDEkYmt2OHFpTAuZH8KnN3pYuyWdyuh/view?usp=drive_link",
       "09": "https://drive.google.com/file/d/1ZVl-6UX2ZZTSicEZd0l9TdiPPfNWe6g0/view?usp=drive_link",
     };
-    if (links[s_no]) {
-      window.open(links[s_no], "_blank");
-    }
+
+  const handleCardClick = (link) => {
+    window.open(link, "_blank");
   };
 
   return (
-    <div id='services' className='services'>
-      <div className="services-title">
-        <h1>Certifications</h1>
-        <img src={theme_pattern} alt="" />
+    <section id="services" className="certifications">
+
+      <div className="cert-header">
+
+        <div className="cert-badge">
+          CREDENTIALS
+        </div>
+
+        <h1>
+          Certifications &
+          <span> continuous learning.</span>
+        </h1>
+
+        <p>
+          Courses, bootcamps and achievements that
+          strengthened my full stack development
+          and AI engineering journey.
+        </p>
+
       </div>
-      <div className="services-container">
-        {Services_Data.map((service, index) => (
-          <div key={index} className="services-format" onClick={() => handleCardClick(service.s_no)}>
-            <h3>{service.s_no}</h3>
-            <img src={service.logo} alt={`${service.institute} logo`} className="services-logo" />
-            <h2>{service.s_name}</h2>
-            <p>{service.s_desc}</p>
-            <p className="certificate-text"><strong>{service.certificate}</strong> from <span>{service.institute}</span></p>
+
+      <div className="cert-grid">
+
+        {Services_Data.map((item,index)=>(
+
+          <div
+            key={index}
+            className="cert-card"
+          >
+
+            <span className="cert-number">
+              {item.s_no}
+            </span>
+
+            <h3>{item.s_name}</h3>
+
+            <h4>{item.institute}</h4>
+
+            <p>{item.s_desc}</p>
+
+            <button
+              onClick={() => handleCardClick(links[item.s_no])}
+              className="cert-btn"
+            >
+              {item.certificate}
+            </button>
+
           </div>
+
         ))}
+
       </div>
-    </div>
+
+    </section>
   );
 };
 
